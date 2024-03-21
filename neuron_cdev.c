@@ -1088,7 +1088,7 @@ int ncdev_module_init(void)
 
 	major = MAJOR(neuron_dev);
 
-	neuron_dev_class = class_create(THIS_MODULE, "neuron_device");
+	neuron_dev_class = class_create("neuron_device");
 	if (IS_ERR(neuron_dev_class)) {
 		ret = PTR_ERR(neuron_dev_class);
 		goto fail;
